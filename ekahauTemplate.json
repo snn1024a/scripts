@@ -1,0 +1,93 @@
+<#”loop-start”: {“type”: “floors”}}#>
+Overview for <#${floor-name}#>
+<# “visualization” :
+{
+   “walls”: “true”
+}
+#>
+
+<#“loop-start”: {”type”: ”aps”, “filter”: {“include”: {“owner”: “my”}}}#>
+
+<#${ap-name}#> coverage on 2.4GHz Band
+<# “visualization”:
+{
+“width-in-millis”: “80”,
+“heatmap”:
+	{
+		“type”: “sig-strength”,
+		“mode”: “smooth”,
+		“accuracy”: “very”,
+		“range-min”: “-65”,
+		“range-max”: “-20”,
+		“range-open”: “open-end”,
+		“filter”: 
+		{
+			“include”: 
+			{
+				“owner”: “my”,
+				“band”: “2.4”
+			}
+		}
+},
+“aps”:
+{
+	“scale”: “200”,
+“show-radios”: “true”,
+“show-name”: “true”,
+“filter”:
+	{
+		“include”:
+		{
+			“owner”: “my”,
+			“band”: “2.4”
+		}
+	}
+}
+}
+#>
+<#”visualization-legend”: {“width-in-millis”: “80”}#>
+<#${ap-name}#> coverage on 5GHz Band <# “visualization”:
+{
+	“width-in-millis”: “80”,
+“heatmap”:
+	{
+		“type”: “sig-strength”,
+		“mode”: “smooth”,
+		“accuracy”: “very”,
+		“range-min”: “-65”,
+		“range-max”: “-20”,
+		“range-open”: “open-end”,
+		“filter”: 
+		{
+			“include”: 
+			{
+				“owner”: “my”,
+				“band”: “5”
+			}
+		}
+},
+“aps”:
+{
+	“scale”: “200”,
+“show-radios”: “true”,
+“show-name”: “true”,
+	“filter”:
+	{
+		“include”:
+		{
+			“owner”: “my”,
+			“band”: “5”
+		}
+	}
+}
+}
+#><#”visualization-legend”: {“width-in-millis”: “80”}#>
+
+<#“loop-end”: {“type”: “aps”}#>
+
+
+
+
+
+<#”loop-end”: {“type”: “floors”}}#>
+
